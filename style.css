@@ -1,40 +1,43 @@
+/* Importation de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 /* Styles généraux */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
     color: #333;
 }
 
-/* Navbar */
+/* Header */
 .navbar {
+    background: linear-gradient(135deg, #007bff, #0056b3);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(45deg, #007bff, #6f42c1);
 }
-
-.navbar-dark .navbar-nav .nav-link {
+.navbar-brand, .navbar-nav .nav-link {
     color: white !important;
+    font-weight: 500;
 }
-
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #f4f4f9 !important;
+.navbar-toggler-icon {
+    filter: invert(1);
 }
 
 /* Section Accueil */
 #accueil {
     text-align: center;
     padding: 80px 20px;
-    background: #007bff;
-    color: white;
-    border-radius: 10px;
 }
 
 #accueil img {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #f4f4f9;
+    border: 5px solid #007bff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+#accueil img:hover {
+    transform: translateY(-5px);
 }
 
 /* Sections */
@@ -47,6 +50,9 @@ section {
 }
 
 /* Compétences */
+#competences h2 {
+    margin-bottom: 30px;
+}
 #competences .row div {
     padding: 20px;
     background: #007bff;
@@ -55,24 +61,31 @@ section {
     border-radius: 10px;
     transition: transform 0.3s;
 }
-
 #competences .row div:hover {
     transform: scale(1.05);
 }
 
 /* Boutons */
-button {
+button, .btn {
     background: #007bff;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
+    font-weight: 500;
+}
+button:hover, .btn:hover {
+    background: #0056b3;
 }
 
-button:hover {
-    background: #0056b3;
+/* Espacement amélioré */
+form button {
+    margin-bottom: 40px;
+}
+.cv-container .btn {
+    margin-top: 20px;
 }
 
 /* Footer */
@@ -80,20 +93,31 @@ footer {
     background-color: #343a40;
     color: white;
     padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
 }
-
 footer a {
     color: #ffffff;
     text-decoration: none;
 }
-
 footer a:hover {
     text-decoration: underline;
 }
 
 /* CV Preview */
+.cv-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
 .cv-preview img {
-    max-width: 100%;
+    max-width: 70%;
     border: 2px solid #007bff;
     border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+.cv-preview img:hover {
+    transform: translateY(-10px);
 }
