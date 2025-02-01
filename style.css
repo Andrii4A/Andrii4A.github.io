@@ -1,13 +1,14 @@
 /* Styles généraux */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f8f9fa;
     color: #333;
 }
 
 /* Navbar */
 .navbar {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #007bff, #6f42c1);
 }
 
 .navbar-dark .navbar-nav .nav-link {
