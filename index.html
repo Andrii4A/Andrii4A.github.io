@@ -1,7 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Andrii Didenko</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="CV.pdf" target="_blank">Mon CV</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="accueil">
+        <img src="photo.jpg" alt="Photo d'\Andrii">
+        <h1>Bienvenue sur mon Portfolio</h1>
+        <p>Je suis Andrii Didenko, étudiant à l'IUT Blagnac. Découvrez mes projets et compétences.</p>
+    </section>
+    
+    <section id="competences">
+        <h2>Mes Compétences</h2>
+        <div class="competence-container">
+            <div class="competence">HTML/CSS</div>
+            <div class="competence">JavaScript</div>
+            <div class="competence">Développement Web</div>
+        </div>
+    </section>
+    
+    <section id="projets">
+        <h2>Mes Projets</h2>
+        <div class="projet">
+            <h3>Projet 1</h3>
+            <p>Description du projet avec compétences associées.</p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Me Contacter</h2>
+        <form>
+            <input type="text" placeholder="Votre Nom" required>
+            <input type="email" placeholder="Votre Email" required>
+            <textarea placeholder="Votre message"></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
 </body>
 </html>
