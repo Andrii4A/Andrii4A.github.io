@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
     color: #333;
-    padding-top: 60px;
+    padding-top: 80px;
 }
 
 /* Navbar */
@@ -30,8 +30,8 @@ body {
 }
 
 #accueil img {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid #f4f4f9;
@@ -99,7 +99,12 @@ footer a:hover {
     border-radius: 10px;
 }
 
-.cv-preview + div {
-    margin-bottom: 50px;
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
+.cv-preview + div {
+    margin-bottom: 100px;
+}
