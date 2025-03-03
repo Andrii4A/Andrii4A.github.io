@@ -30,8 +30,8 @@ body {
 }
 
 #accueil img {
-    width: 10px;
-    height: 10px;
+    max-width: 10px;
+    max-height: 10px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid #f4f4f9;
