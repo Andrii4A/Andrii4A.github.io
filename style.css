@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
     color: #333;
-    padding-top: 70px; /* Augmenté pour éviter que la navbar cache du contenu */
+    padding-top: 80px;
 }
 
 /* Navbar */
@@ -12,18 +12,26 @@ body {
     background: linear-gradient(45deg, #007bff, #6f42c1);
 }
 
-/* Fixer la navbar en haut */
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+.navbar-dark .navbar-nav .nav-link {
+    color: white !important;
 }
 
-/* Ajustement de la taille de la photo de profil */
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #f4f4f9 !important;
+}
+
+/* Section Accueil */
+#accueil {
+    text-align: center;
+    padding: 80px 20px;
+    background: #007bff;
+    color: white;
+    border-radius: 10px;
+}
+
 #accueil img {
-    width: 120px; /* Réduction de la taille */
-    height: 120px;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid #f4f4f9;
@@ -39,14 +47,33 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Ajustement du bouton Télécharger le CV */
-.cv-preview {
-    margin-bottom: 30px;
+/* Compétences */
+#competences .row div {
+    padding: 20px;
+    background: #007bff;
+    color: white;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
 }
 
-.cv-preview + div {
-    margin-top: 30px;
-    margin-bottom: 100px; /* Ajout d’espace entre le bouton et le footer */
+#competences .row div:hover {
+    transform: scale(1.05);
+}
+
+/* Boutons */
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
 }
 
 /* Footer */
@@ -54,7 +81,6 @@ footer {
     background-color: #343a40;
     color: white;
     padding: 20px 0;
-    text-align: center;
 }
 
 footer a {
@@ -64,4 +90,21 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* CV Preview */
+.cv-preview img {
+    max-width: 100%;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.cv-preview + div {
+    margin-bottom: 100px;
 }
