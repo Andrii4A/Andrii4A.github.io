@@ -27,20 +27,24 @@ body {
     border-radius: 10px;
 }
 
+/* Photo de profil en rond et plus petite */
 .profile-pic {
-    width: 120px; /* Réduit la taille */
-    height: 120px; /* Réduit la taille */
-    border-radius: 50%;
+    width: 120px; /* Réduction de la taille */
+    height: 120px; /* Réduction de la taille */
+    border-radius: 50%; /* Rend l'image ronde */
     overflow: hidden;
-    margin-bottom: 2rem;
-    border: 5px solid #fff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 2rem; /* Centre l'image et ajoute un espacement */
+    border: 5px solid #fff; /* Bordure blanche */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Effet d’ombre */
 }
 
 .profile-pic img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover; /* Remplit bien le cercle */
 }
   
 /* Sections */
