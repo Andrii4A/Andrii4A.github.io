@@ -27,18 +27,20 @@ body {
     border-radius: 10px;
 }
 
-.profile-img-container {
-    width: 150px; /* Taille du conteneur */
-    height: 150px; /* Taille du conteneur */
-    border-radius: 50%; /* Pour rendre la div ronde */
-    overflow: hidden; /* Cache les parties de l'image qui dépassent */
-    display: inline-block; /* Garder la div en ligne */
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.profile-img {
-    width: 100%; /* L'image occupe 100% du conteneur */
-    height: 100%; /* L'image occupe 100% du conteneur */
-    object-fit: cover; /* L'image remplit l'espace sans être déformée */
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
   
 /* Sections */
