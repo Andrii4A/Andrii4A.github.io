@@ -1,99 +1,56 @@
 /* Styles généraux */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+    font-family: Arial, sans-serif;
 }
 
-/* Navbar */
+/* Navigation */
 .navbar {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(45deg, #007bff, #6f42c1);
+    padding: 10px 0;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-    color: white !important;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #f4f4f9 !important;
-}
-
-/* Section Accueil */
-#accueil {
-    text-align: center;
-    padding: 80px 20px;
-    background: #007bff;
-    color: white;
-    border-radius: 10px;
-}
-
+/* Photo de profil sur la page d'accueil */
 #accueil img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
+    width: 150px;  /* Taille fixe pour éviter un agrandissement excessif */
+    height: 150px;
     border-radius: 50%;
-    border: 5px solid #f4f4f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    border: 3px solid #fff;
+    display: block;
+    margin: 0 auto;
 }
 
-/* Sections */
-section {
-    padding: 60px 20px;
-    background: white;
+/* CV image preview */
+.cv-preview img {
+    width: 80%; /* Ajuste la taille du CV pour qu'il soit lisible sans être trop grand */
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Cartes de projets */
+.card {
     border-radius: 10px;
-    margin-top: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-/* Compétences */
-#competences .row div {
-    padding: 20px;
-    background: #007bff;
-    color: white;
-    margin: 10px;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-#competences .row div:hover {
+.card:hover {
     transform: scale(1.05);
 }
 
-/* Boutons */
-button {
-    background: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
+/* Icônes de compétences */
+.fa-3x {
+    color: #007bff;
+    margin-bottom: 10px;
 }
 
-button:hover {
-    background: #0056b3;
+/* Formulaire de contact */
+form .form-control {
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-/* Footer */
+/* Pied de page */
 footer {
-    background-color: #343a40;
-    color: white;
-    padding: 20px 0;
-}
-
-footer a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* CV Preview */
-.cv-preview img {
-    max-width: 100%;
-    border: 2px solid #007bff;
-    border-radius: 10px;
+    margin-top: 50px;
 }
