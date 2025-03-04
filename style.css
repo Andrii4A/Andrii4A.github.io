@@ -34,18 +34,13 @@ body {
 }
 
 #accueil img {
-    width: 120px !important;
-    height: 120px !important;
-    position: absolute; /* or relative */
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 120px; /* Ajuste la taille selon tes préférences */
+    max-height: 120px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #fff;
-    display: block;
 }
-
 
 /* Sections */
 section {
