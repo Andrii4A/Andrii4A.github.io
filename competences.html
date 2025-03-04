@@ -189,6 +189,7 @@
                 <div class="col-12 text-center">
                     <i class="${competenceActuelle.icon} fa-4x mb-3"></i>
                     <h1 class="mb-3">${competenceActuelle.titre}</h1>
+                    <p class="lead">${competenceActuelle.description}</p>
                 </div>
             </div>
             
@@ -208,11 +209,17 @@
                                 <img src="${projet.image}" alt="${projet.titre}" class="img-fluid mb-3">
                                 <p><strong>Description :</strong> ${projet.description}</p>
                                 <p><strong>Langages et Technologies :</strong></p>
-                                <div class="d-flex flex-wrap">
+                                <div class="d-flex flex-wrap mb-3">
                                     ${projet.technologies.map(tech => 
                                         `<span class="badge bg-primary m-1">${tech}</span>`
                                     ).join('')}
                                 </div>
+                                ${projet.githubLink ? 
+                                    `<a href="${projet.githubLink}" target="_blank" class="btn btn-dark">
+                                        <i class="fab fa-github me-2"></i>Voir sur GitHub
+                                    </a>` 
+                                    : ''
+                                }
                             </div>
                         </div>
                     </div>
