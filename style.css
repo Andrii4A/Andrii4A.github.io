@@ -27,14 +27,19 @@ body {
     border-radius: 10px;
 }
 
-#accueil img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #f4f4f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+.profile-img {
+    width: 14rem; /* 56px * 4 = 56px (rem) */
+    height: 14rem; /* 56px * 4 = 56px (rem) */
+    border-radius: 50%; /* Cercle parfait */
+    border: 4px solid #60a5fa; /* Couleur de bordure bleue */
+    object-fit: cover; /* Couvrir l'image sans déformation */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    transition: transform 0.3s ease; /* Transition de la transformation */
+  }
+  
+  .profile-img:hover {
+    transform: scale(1.05); /* Zoom lors du survol */
+  }  
 
 /* Sections */
 section {
