@@ -28,14 +28,14 @@ body {
 }
 
 .profile-img {
-    width: 150px;  /* Taille fixe pour éviter un agrandissement excessif */
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #fff;
+    width: 120px; /* Taille réduite */
+    height: 120px; /* Taille réduite */
+    border-radius: 50%; /* Cercle parfait */
+    object-fit: cover; /* Ne pas déformer l'image */
+    border: 3px solid #fff; /* Bordure blanche */
     display: block;
-    margin: 0 auto;
-  }
+    margin: 0 auto; /* Centrer horizontalement */
+}
   
 /* Sections */
 section {
@@ -91,9 +91,19 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* CV Preview */
-.cv-preview img {
-    max-width: 100%;
+.cv-preview-img {
+    width: 80%; /* Taille plus petite */
+    max-width: 600px; /* Taille maximale */
+    display: block;
+    margin: 0 auto;
     border: 2px solid #007bff;
     border-radius: 10px;
+}
+
+#cv {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
 }
