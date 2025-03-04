@@ -35,8 +35,8 @@ body {
 
 #accueil img {
     display: block;
-    max-width: 120px; /* Ajuste la taille selon tes préférences */
-    max-height: 120px;
+    max-width: 10px; /* Ajuste la taille selon tes préférences */
+    max-height: 10px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #fff;
