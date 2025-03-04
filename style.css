@@ -34,8 +34,8 @@ body {
 }
 
 #accueil img {
-    width: 120px; /* Ajuste la taille selon tes préférences */
-    height: 120px;
+    max-width: 120px; /* Ajuste la taille selon tes préférences */
+    max-height: 120px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #fff;
