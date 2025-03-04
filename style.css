@@ -27,7 +27,7 @@ body {
     border-radius: 10px;
 }
 
-.profile-img {
+.d-flex-justify-content-center {
     width: 120px; /* Taille réduite */
     height: 120px; /* Taille réduite */
     border-radius: 50%; /* Cercle parfait */
