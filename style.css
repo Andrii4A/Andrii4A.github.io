@@ -37,10 +37,6 @@ body {
     margin: 0 auto;
   }
   
-  .profile-img:hover {
-    transform: scale(1.05); /* Zoom lors du survol */
-  }
-  
 /* Sections */
 section {
     padding: 60px 20px;
