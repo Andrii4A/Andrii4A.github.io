@@ -36,12 +36,14 @@ body {
 #accueil img {
     width: 120px !important;
     height: 120px !important;
+    position: absolute; /* or relative */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #fff;
     display: block;
-    max-width: 120px !important;
-    max-height: 120px !important;
 }
 
 
