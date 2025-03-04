@@ -28,13 +28,13 @@ body {
 }
 
 .profile-img {
-    width: 4rem; /* Taille plus petite de l'image */
-    height: 4rem; /* Taille plus petite de l'image */
-    border-radius: 50%; /* Cercle parfait */
-    border: 2px solid #60a5fa; /* Bordure bleue plus fine */
-    object-fit: cover; /* Couvrir l'image sans déformation */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre portée plus discrète */
-    transition: transform 0.3s ease; /* Transition de la transformation */
+    width: 150px;  /* Taille fixe pour éviter un agrandissement excessif */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    display: block;
+    margin: 0 auto;
   }
   
   .profile-img:hover {
