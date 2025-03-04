@@ -3,16 +3,11 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
     color: #333;
-    padding-top: 80px;
 }
 
 /* Navbar */
 .navbar {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(45deg, #007bff, #6f42c1);
-}
-
-.bg-gradient {
     background: linear-gradient(45deg, #007bff, #6f42c1);
 }
 
@@ -34,12 +29,12 @@ body {
 }
 
 #accueil img {
-    display: block;
-    max-width: 10px; /* Ajuste la taille selon tes préférences */
-    max-height: 10px;
-    border-radius: 50%;
+    width: 180px;
+    height: 180px;
     object-fit: cover;
-    border: 2px solid #fff;
+    border-radius: 50%;
+    border: 5px solid #f4f4f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Sections */
@@ -96,30 +91,9 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* CV Preview */
 .cv-preview img {
-    max-width: 60%; /* Réduit de 100% à 60% */
+    max-width: 100%;
     border: 2px solid #007bff;
     border-radius: 10px;
 }
-
-/* Augmenter l'espace entre l'image du CV et le bouton */
-.cv-preview {
-    margin-bottom: 30px;
-}
-
-/* Ajouter plus d'espace entre le bouton et le footer */
-.cv-preview + div {
-    margin-bottom: 50px;
-}
-
-/* Augmenter l'espace entre le bouton et le footer */
-#cv {
-    padding-bottom: 80px;
-}
-
-header {
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-}
-
