@@ -33,15 +33,6 @@ body {
     border-radius: 10px;
 }
 
-#accueil img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #f4f4f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 /* Sections */
 section {
     padding: 60px 20px;
