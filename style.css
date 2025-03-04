@@ -28,23 +28,20 @@ body {
 }
 
 /* Assure que l'image est bien ronde et centrée */
-.profile-container {
-    width: 120px; /* Taille correcte */
-    height: 120px;
-    border-radius: 50%; /* Rend l'image ronde */
-    overflow: hidden;
+.profile-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px auto; /* Centre l'image */
-    border: 3px solid white; /* Bordure stylée */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 
-.profile-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.profile-pic {
+    width: 120px; /* Taille contrôlée */
+    height: 120px;
+    border-radius: 50%; /* Cercle parfait */
+    object-fit: cover; /* Assure que l’image remplit bien le cercle */
+    border: 4px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
   
