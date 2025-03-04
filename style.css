@@ -91,7 +91,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-.cv-preview-img {
+.cv-preview {
     width: 80%; /* Taille plus petite */
     max-width: 600px; /* Taille maximale */
     display: block;
