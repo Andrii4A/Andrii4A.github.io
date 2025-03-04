@@ -21,10 +21,7 @@
                         <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
                         <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
                         <li class="nav-item"><a class="nav-link" href="#experience">Expérience</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="cv.html">Mon CV</a></li>
-                        <li class="nav-item"><a class="nav-link" href="projets.html">Projets</a></li>
                     </ul>
                 </div>
             </div>
@@ -42,14 +39,54 @@
     <section id="competences" class="container mt-5 text-center">
         <h2 class="mb-5">Compétences</h2>
         <div class="row justify-content-center">
-            
-            <!-- New skills added -->
-            <div class="col-md-3 mb-4"><i class="fa-solid fa-code fa-3x"></i><p>Développement d'application</p></div>
-            <div class="col-md-3 mb-4"><i class="fa-solid fa-chart-line fa-3x"></i><p>Optimisation d'applications</p></div>
-            <div class="col-md-3 mb-4"><i class="fa-solid fa-network-wired fa-3x"></i><p>Administration systèmes</p></div>
-            <div class="col-md-3 mb-4"><i class="fa-solid fa-table fa-3x"></i><p>Gestion de données</p></div>
-            <div class="col-md-3 mb-4"><i class="fa-solid fa-tasks fa-3x"></i><p>Conduite de projet</p></div>
-            <div class="col-md-3 mb-4"><i class="fa-solid fa-users fa-3x"></i><p>Équipe informatique</p></div>
+            <div class="col-md-4 mb-4">
+                <a href="competences.php?competence=developpement-application" class="text-decoration-none">
+                    <div class="skill-button">
+                        <i class="fa-solid fa-code fa-3x"></i>
+                        <p>Développement d'application</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="competences.php?competence=gestion-donnees" class="text-decoration-none">
+                    <div class="skill-button">
+                        <i class="fa-solid fa-table fa-3x"></i>
+                        <p>Gestion de données</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="competences.php?competence=administration-systemes" class="text-decoration-none">
+                    <div class="skill-button">
+                        <i class="fa-solid fa-network-wired fa-3x"></i>
+                        <p>Administration systèmes</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="competences.php?competence=optimisation-applications" class="text-decoration-none">
+                    <div class="skill-button">
+                        <i class="fa-solid fa-chart-line fa-3x"></i>
+                        <p>Optimisation d'applications</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="competences.php?competence=conduite-projet" class="text-decoration-none">
+                    <div class="skill-button">
+                        <i class="fa-solid fa-tasks fa-3x"></i>
+                        <p>Conduite de projet</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="competences.php?competence=equipe-informatique" class="text-decoration-none">
+                    <div class="skill-button">
+                        <i class="fa-solid fa-users fa-3x"></i>
+                        <p>Équipe informatique</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
     
@@ -65,36 +102,6 @@
                     <h4 class="text-muted">Développement Logiciel</h4>
                     <p class="text-muted"><i class="fas fa-map-marker-alt me-2"></i>Toulouse, France</p>
                     <p class="mt-3">Stage de développement logiciel dans un environnement professionnel de pointe, contribuant à l'innovation technologique dans le secteur automobile.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="projets" class="container mt-5">
-        <h2 class="text-center mb-5">Mes Projets</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card p-3 shadow-lg">
-                    <h3>GreenBloom (IoT & E-commerce)</h3>
-                    <p>Application IoT en JavaFX et site web e-commerce. (3 mois - 4 personnes)</p>
-                    <p><strong>Compétences :</strong></p>
-                    <p><i class="fa-brands fa-java"></i> Java, <i class="fa-brands fa-html5"></i> HTML/CSS, <i class="fa-solid fa-database"></i> SQL, <i class="fa-brands fa-php"></i> PHP, <i class="fa-solid fa-comments"></i> Communication, <i class="fa-solid fa-project-diagram"></i> Gestion de projets</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-3 shadow-lg">
-                    <h3>Gestion des Colis Oubliés</h3>
-                    <p>Application en PHP pour la gestion des colis oubliés. (3 mois - 5 personnes)</p>
-                    <p><strong>Compétences :</strong></p>
-                    <p><i class="fa-brands fa-php"></i> PHP, <i class="fa-brands fa-html5"></i> HTML/CSS, <i class="fa-solid fa-database"></i> SQL, <i class="fa-solid fa-comments"></i> Communication, <i class="fa-solid fa-project-diagram"></i> Gestion de projets</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-3 shadow-lg">
-                    <h3>Conception de Base de Données</h3>
-                    <p>Modélisation et conception d'une base de données relationnelle. (1 mois - 4 personnes)</p>
-                    <p><strong>Compétences :</strong></p>
-                    <p><i class="fa-solid fa-database"></i> SQL, <i class="fa-solid fa-project-diagram"></i> Gestion de projets</p>
                 </div>
             </div>
         </div>

@@ -4,6 +4,36 @@ body {
     color: #333;
 }
 
+/* Skill Buttons */
+.skill-button {
+    background: #007bff;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+
+.skill-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.skill-button i {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.skill-button p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
 /* Navbar */
 .navbar {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
