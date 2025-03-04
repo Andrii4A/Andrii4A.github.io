@@ -1,3 +1,4 @@
+/* Styles généraux */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
@@ -8,10 +9,11 @@ body {
 /* Navbar */
 .navbar {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #007bff, #6f42c1);
 }
 
-.bg-primary {
-    background: linear-gradient(45deg, #007bff, #6f42c1) !important;
+.bg-gradient {
+    background: linear-gradient(45deg, #007bff, #6f42c1);
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -31,17 +33,9 @@ body {
     border-radius: 10px;
 }
 
-/* Photo de profil avec taille fixe */
-.photo-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.profile-photo {
-    width: 180px;
-    height: 180px;
+#accueil img {
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid #f4f4f9;
@@ -91,7 +85,6 @@ footer {
     background-color: #343a40;
     color: white;
     padding: 20px 0;
-    margin-top: 50px;
 }
 
 footer a {
@@ -103,34 +96,30 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* CV Page Styles */
-.cv-container {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-}
-
-.cv-image {
-    max-width: 500px;
-    width: 90%;
+.cv-preview img {
+    max-width: 60%; /* Réduit de 100% à 60% */
     border: 2px solid #007bff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.download-button {
-    margin: 30px 0 60px 0;
+/* Augmenter l'espace entre l'image du CV et le bouton */
+.cv-preview {
+    margin-bottom: 30px;
+}
+
+/* Ajouter plus d'espace entre le bouton et le footer */
+.cv-preview + div {
+    margin-bottom: 50px;
+}
+
+/* Augmenter l'espace entre le bouton et le footer */
+#cv {
+    padding-bottom: 80px;
 }
 
 header {
     position: fixed;
-    top: 0;
     width: 100%;
     z-index: 1000;
 }
 
-/* Espace supplémentaire pour la page CV */
-#cv {
-    min-height: 70vh; /* Assurer une hauteur minimale pour éviter que le footer ne remonte trop */
-    padding-bottom: 100px;
-}
