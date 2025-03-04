@@ -1,56 +1,98 @@
 /* Styles généraux */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
-/* Navigation */
+/* Navbar */
 .navbar {
-    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Photo de profil sur la page d'accueil */
-#accueil img {
-    width: 150px;  /* Taille fixe pour éviter un agrandissement excessif */
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #fff;
-    display: block;
-    margin: 0 auto;
+.navbar-dark .navbar-nav .nav-link {
+    color: white !important;
 }
 
-/* CV image preview */
-.cv-preview img {
-    width: 80%; /* Ajuste la taille du CV pour qu'il soit lisible sans être trop grand */
-    max-width: 600px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #f4f4f9 !important;
 }
 
-/* Cartes de projets */
-.card {
+/* Section Accueil */
+#accueil {
+    text-align: center;
+    padding: 80px 20px;
+    background: #007bff;
+    color: white;
     border-radius: 10px;
-    transition: transform 0.3s ease;
 }
 
-.card:hover {
+#accueil img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #f4f4f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    background: white;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Compétences */
+#competences .row div {
+    padding: 20px;
+    background: #007bff;
+    color: white;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+#competences .row div:hover {
     transform: scale(1.05);
 }
 
-/* Icônes de compétences */
-.fa-3x {
-    color: #007bff;
-    margin-bottom: 10px;
+/* Boutons */
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Formulaire de contact */
-form .form-control {
-    max-width: 500px;
-    margin: 0 auto;
+button:hover {
+    background: #0056b3;
 }
 
-/* Pied de page */
+/* Footer */
 footer {
-    margin-top: 50px;
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* CV Preview */
+.cv-preview img {
+    max-width: 100%;
+    border: 2px solid #007bff;
+    border-radius: 10px;
 }
