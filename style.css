@@ -27,14 +27,18 @@ body {
     border-radius: 10px;
 }
 
-.d-flex-justify-content-center {
-    width: 120px; /* Taille réduite */
-    height: 120px; /* Taille réduite */
-    border-radius: 50%; /* Cercle parfait */
-    object-fit: cover; /* Ne pas déformer l'image */
-    border: 3px solid #fff; /* Bordure blanche */
-    display: block;
-    margin: 0 auto; /* Centrer horizontalement */
+.profile-img-container {
+    width: 150px; /* Taille du conteneur */
+    height: 150px; /* Taille du conteneur */
+    border-radius: 50%; /* Pour rendre la div ronde */
+    overflow: hidden; /* Cache les parties de l'image qui dépassent */
+    display: inline-block; /* Garder la div en ligne */
+}
+
+.profile-img {
+    width: 100%; /* L'image occupe 100% du conteneur */
+    height: 100%; /* L'image occupe 100% du conteneur */
+    object-fit: cover; /* L'image remplit l'espace sans être déformée */
 }
   
 /* Sections */
