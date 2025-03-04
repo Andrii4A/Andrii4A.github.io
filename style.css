@@ -1,71 +1,93 @@
+/* Styles généraux */
 body {
     font-family: 'Arial', sans-serif;
-    padding-top: 56px;
+    background-color: #f8f9fa;
+    color: #333;
+    padding-top: 80px;
 }
 
-/* Section title styling */
-.section-title {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
+/* Navbar */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #007bff, #6f42c1);
 }
 
-.section-title::after {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 3px;
-    background-color: #0d6efd;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+.bg-gradient {
+    background: linear-gradient(45deg, #007bff, #6f42c1);
 }
 
-/* Profile image */
-.profile-image {
-    width: 200px;
-    height: 200px;
+.navbar-dark .navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #f4f4f9 !important;
+}
+
+/* Section Accueil */
+#accueil {
+    text-align: center;
+    padding: 80px 20px;
+    background: #007bff;
+    color: white;
+    border-radius: 10px;
+}
+
+#accueil img {
+    width: 120px; /* Ajuste la taille selon tes préférences */
+    height: 120px;
+    border-radius: 50%;
     object-fit: cover;
-    border: 5px solid white;
+    border: 2px solid #fff;
 }
 
-/* Competence cards */
-.comp-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Sections */
+section {
+    padding: 60px 20px;
+    background: white;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Compétences */
+#competences .row div {
+    padding: 20px;
+    background: #007bff;
+    color: white;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+#competences .row div:hover {
+    transform: scale(1.05);
+}
+
+/* Boutons */
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
     border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.comp-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+button:hover {
+    background: #0056b3;
 }
 
-/* Project cards */
-.project-card {
-    transition: transform 0.3s ease;
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Override Bootstrap colors */
-.bg-primary {
-    background: linear-gradient(to right, #0d6efd, #0b5ed7) !important;
-}
-
-.btn-primary {
-    background: #0d6efd;
-    border-color: #0d6efd;
-}
-
-.btn-primary:hover {
-    background: #0b5ed7;
-    border-color: #0b5ed7;
-}
-
-/* Footer links */
 footer a {
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -73,12 +95,30 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* CV page specific */
-#cv img {
-    max-width: 100%;
-    transition: transform 0.3s ease;
+.cv-preview img {
+    max-width: 60%; /* Réduit de 100% à 60% */
+    border: 2px solid #007bff;
+    border-radius: 10px;
 }
 
-#cv img:hover {
-    transform: scale(1.02);
+/* Augmenter l'espace entre l'image du CV et le bouton */
+.cv-preview {
+    margin-bottom: 30px;
 }
+
+/* Ajouter plus d'espace entre le bouton et le footer */
+.cv-preview + div {
+    margin-bottom: 50px;
+}
+
+/* Augmenter l'espace entre le bouton et le footer */
+#cv {
+    padding-bottom: 80px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
