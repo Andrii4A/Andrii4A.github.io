@@ -177,64 +177,99 @@
         }
     };
 
-    function afficherCompetence() {
-        // Récupérer la compétence depuis l'URL
-        const params = new URLSearchParams(window.location.search);
-        const competence = params.get('competence') || 'developpement-application';
+    function afficherProjet(projetId) {
+        // Trouver le projet correspondant à l'ID
+        const projet = projets.find(p => p.id === projetId);
         
-        const competenceActuelle = competences[competence] || competences['developpement-application'];
-        
+        if (!projet) {
+            // Si aucun projet n'est trouvé, afficher tous les projets
+            afficherProjets();
+            return;
+        }
+
         const contenuHTML = `
-            <div class="row mb-4">
-                <div class="col-12 text-center">
-                    <i class="${competenceActuelle.icon} fa-4x mb-3"></i>
-                    <h1 class="mb-3">${competenceActuelle.titre}</h1>
-                    <p class="lead">${competenceActuelle.description}</p>
+            <div class="row mb-5">
+                <div class="col-md-5">
+                    <img src="${projet.image}" alt="${projet.titre}" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-7">
+                    <h2>${projet.titre}</h2>
+                    <p class="lead">${projet.descriptionCourte}</p>
+                    
+                    <h4>Technologies</h4>
+                    <div class="mb-3">
+                        ${projet.technologies.map(tech => 
+                            `<span class="badge bg-primary me-2 mb-2">${tech}</span>`
+                        ).join('')}
+                    </div>
+                    
+                    <h4>Compétences Liées</h4>
+                    <div class="mb-3">
+                        ${projet.competencesLiees.map(comp => {
+                            const titres = {
+                                'developpement-application': 'Développement d\'Application',
+                                'gestion-donnees': 'Gestion de Données',
+                                'administration-systemes': 'Administration Systèmes',
+                                'optimisation-applications': 'Optimisation d\'Applications',
+                                'conduite-projet': 'Conduite de Projet'
+                            };
+                            return `<span class="badge bg-secondary me-2 mb-2">${titres[comp]}</span>`;
+                        }).join('')}
+                    </div>
+                    
+                    ${projet.githubLink ? 
+                        `<a href="${projet.githubLink}" target="_blank" class="btn btn-dark me-2">
+                            <i class="fab fa-github me-2"></i>Voir sur GitHub
+                        </a>` 
+                        : ''
+                    }
                 </div>
             </div>
-            
-            <div class="row">
-                ${competenceActuelle.projets.length === 0 ? 
-                    `<div class="col-12 text-center">
-                        <p class="lead">Aucun projet n'a encore été ajouté pour cette compétence.</p>
-                    </div>` 
-                    : 
-                    competenceActuelle.projets.map(projet => `
-                    <div class="col-md-6 mb-4">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3>${projet.titre}</h3>
-                            </div>
-                            <div class="card-body">
-                                <img src="${projet.image}" alt="${projet.titre}" class="img-fluid mb-3">
-                                <p><strong>Description :</strong> ${projet.description}</p>
-                                <p><strong>Langages et Technologies :</strong></p>
-                                <div class="d-flex flex-wrap mb-3">
-                                    ${projet.technologies.map(tech => 
-                                        `<span class="badge bg-primary m-1">${tech}</span>`
-                                    ).join('')}
-                                </div>
-                                ${projet.githubLink ? 
-                                    `<a href="${projet.githubLink}" target="_blank" class="btn btn-dark me-2">
-                                        <i class="fab fa-github me-2"></i>Voir sur GitHub
-                                    </a>` 
-                                    : ''
-                                }
-                                <a href="projets-details.html" class="btn btn-primary">
-                                    Voir les détails
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                `).join('')}
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h4>Description Détaillée</h4>
+                    <p>${projet.descriptionComplete}</p>
+                </div>
             </div>
         `;
 
-        document.getElementById('competence-content').innerHTML = contenuHTML;
+        document.getElementById('projets-content').innerHTML = contenuHTML;
+    }
+
+    function afficherProjets() {
+        const contenuHTML = projets.map(projet => `
+            <div class="row mb-5">
+                <div class="col-md-5">
+                    <img src="${projet.image}" alt="${projet.titre}" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-7">
+                    <h2>${projet.titre}</h2>
+                    <p class="lead">${projet.descriptionCourte}</p>
+                    <a href="projets-details.html?projet=${projet.id}" class="btn btn-primary">
+                        Voir les détails
+                    </a>
+                </div>
+            </div>
+            <hr>
+        `).join('');
+
+        document.getElementById('projets-content').innerHTML = contenuHTML;
     }
 
     // Charger le contenu quand la page est chargée
-    window.onload = afficherCompetence;
+    window.onload = function() {
+        // Récupérer l'ID du projet depuis l'URL
+        const params = new URLSearchParams(window.location.search);
+        const projetId = params.get('projet');
+
+        if (projetId) {
+            // Si un ID de projet est spécifié, afficher ce projet
+            afficherProjet(projetId);
+        } else {
+            // Sinon, afficher la liste de tous les projets
+            afficherProjets();
+        }
+    };
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
